@@ -7,6 +7,10 @@ body {
     align-items: center;
     height: 100vh;
 }
+h2{
+    display: flex;
+    justify-content: center;
+}
 :root {
     --safety-orange: #EC8439;
     --sandy-brown: #EE9D5E;
@@ -60,13 +64,20 @@ body {
     color: var(--white);
     border: none;
 }
-.btn-register:hover {
+.btn:hover {
     background-color: var(--safety-orange);
 }     
-.btn-color a{
+.register-container a{
     color: var(--sandy-brown);
     text-decoration: none;
 }
-.btn-color a:hover{
+
+.register-container a:hover{
+    color: var(--safety-orange);
     text-decoration: underline;
+}
+
+.register-container p{
+    display: flex;
+    justify-content: center;
 }
