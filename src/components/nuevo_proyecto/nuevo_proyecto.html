@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuevo Proyecto</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="../../styles/css/sb-admin-2.min.css">
     <link rel="stylesheet" href="../../styles/css/centrado.css">
 </head>
@@ -13,19 +13,12 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
             <hr class="sidebar-divider my-0">
             <li class="nav-item active">
-                <a class="nav-link" href="/dashboard">
+                <a class="nav-link" href="../dashboard/dashboard.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
             <hr class="sidebar-divider">
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="/nuevo-proyecto">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Nuevo Proyecto</span>
-                </a>
-            </li>
-            <hr class="sidebar-divider d-none d-md-block">
         </ul>
         <!-- End of Sidebar -->
 
@@ -37,37 +30,34 @@
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Usuario</span>
-                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg" alt="Perfil">
-                            </a>
-                        </li>
-                    </ul>
                 </nav>
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <h1 class="h3 mb-4 text-gray-800">Dashboard</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Crear Nuevo Proyecto</h1>
 
-                    <!-- Tabla de Usuarios -->
-                    <table class="table table-striped centrado">
-                        <thead>
-                            <tr>
-                                <th scope="col">ID#</th>
-                                <th scope="col">Nombre</th>
-                                <th scope="col">Email</th>
-                                <th scope="col">Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody id="usuariosTableBody">
-                            <!-- Los usuarios se cargarán aquí dinámicamente -->
-                        </tbody>
-                    </table>
+                    <!-- Formulario -->
+                    <form class="w-100" id="projectForm">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Ingrese el nombre del proyecto" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="descripcion" class="form-label">Descripción</label>
+                            <textarea class="form-control" id="descripcion" placeholder="Ingrese una descripción" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email" placeholder="Ingrese su correo" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label">Teléfono</label>
+                            <input type="tel" class="form-control" id="telefono" placeholder="Ingrese su teléfono" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Crear Proyecto</button>
+                    </form>
                 </div>
-                <!-- End Page Content -->
             </div>
 
             <!-- Footer -->
@@ -80,38 +70,5 @@
             </footer>
         </div>
     </div>
-
-    <script>
-        // Simulación de la carga de usuarios
-        const usuarios = [
-            { id: 1, fullname: "Usuario 1", email: "usuario1@example.com" },
-            { id: 2, fullname: "Usuario 2", email: "usuario2@example.com" },
-            { id: 3, fullname: "Usuario 3", email: "usuario3@example.com" }
-        ];
-
-        // Función para cargar los usuarios en la tabla
-        function cargarUsuarios() {
-            const tbody = document.getElementById('usuariosTableBody');
-            tbody.innerHTML = ''; // Limpiar la tabla antes de cargar
-
-            usuarios.forEach(usuario => {
-                const row = `
-                    <tr>
-                        <th scope="row">${usuario.id}</th>
-                        <td>${usuario.fullname}</td>
-                        <td>${usuario.email}</td>
-                        <td>
-                            <button class="btn btn-success">Editar</button>
-                            <button class="btn btn-danger">Eliminar</button>
-                        </td>
-                    </tr>
-                `;
-                tbody.innerHTML += row;
-            });
-        }
-
-        // Cargar los usuarios al iniciar la página
-        document.addEventListener('DOMContentLoaded', cargarUsuarios);
-    </script>
 </body>
 </html>
