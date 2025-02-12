@@ -18,40 +18,11 @@
                 <label for="password">Contraseña</label>
                 <input type="password" id="password" placeholder="Introduce tu contraseña" required>
             </div>
-            <button type="submit" class="btn-login">Iniciar Sesión</button>
+            <button butype="submit" class="btn-login" hreft="../dashboard/dashboard.htmlaa">Iniciar Sesión</button>
         </form>
         <div class="footer">
             <p>¿No tienes cuenta? <a href="../register/registro.html">Regístrate</a></p>
         </div>
     </div>
-
-    <script>
-        document.getElementById("loginForm").addEventListener("submit", async function(event) {
-            event.preventDefault();
-            
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("password").value;
-
-            try {
-                const response = await fetch("http://localhost:5000/usuarios/login", { // Ajusta la URL según tu backend
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({ email, password })
-                });
-
-                if (!response.ok) {
-                    throw new Error("Credenciales incorrectas");
-                }
-
-                const data = await response.json();
-                localStorage.setItem("token", data.token);
-                window.location.href = "dashboard.html"; // Redirige al Dashboard si el login es exitoso
-            } catch (error) {
-                alert("Credenciales incorrectas. Inténtalo de nuevo.");
-            }
-        });
-    </script>
 </body>
 </html>
