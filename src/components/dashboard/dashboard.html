@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuevo Proyecto</title>
+    <title>Proyectos</title>
     <link rel="stylesheet" href="../../styles/css/sb-admin-2.min.css">
     <link rel="stylesheet" href="../../styles/css/centrado.css">
 </head>
@@ -15,7 +15,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="../dashboard/dashboard.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span>
+                    <span>PROYECTOS</span>
                 </a>
             </li>
             <hr class="sidebar-divider">
@@ -50,15 +50,16 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <h1 class="h3 mb-4 text-gray-800">Dashboard</h1>
+                    <h1 class="h3 mb-4 text-gray-800">PROYECTOS ACTIVOS</h1>
 
                     <!-- Tabla de Usuarios -->
                     <table class="table table-striped centrado">
                         <thead>
                             <tr>
-                                <th scope="col">ID#</th>
                                 <th scope="col">Nombre</th>
-                                <th scope="col">Email</th>
+                                <th scope="col">Equipo</th>
+                                <th scope="col">Cantidad de miembros</th>
+                                <th scope="col">Estado</th>
                                 <th scope="col">Acciones</th>
                             </tr>
                         </thead>
@@ -70,14 +71,6 @@
                 <!-- End Page Content -->
             </div>
 
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; CARPIZO FIERRO BRIAN DE JESUS 2025</span>
-                    </div>
-                </div>
-            </footer>
         </div>
     </div>
 
@@ -97,11 +90,12 @@
             usuarios.forEach(usuario => {
                 const row = `
                     <tr>
-                        <th scope="row">${usuario.id}</th>
-                        <td>${usuario.fullname}</td>
+                        <td>${usuario.fullname}</td> 
                         <td>${usuario.email}</td>
+                        <td>5</td>
+                        <td>Activo</td>
                         <td>
-                            <button class="btn btn-success">Editar</button>
+                            <a href="../descripcionProyecto/descripcionProyecto.html" class="btn btn-success">Editar</a>
                             <button class="btn btn-danger">Eliminar</button>
                         </td>
                     </tr>

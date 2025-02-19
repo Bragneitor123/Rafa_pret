@@ -1,12 +1,17 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: var(--safety-orange);
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
+    background-color: var(--safety-orange);
+  }
 h2{
     display: flex;
     justify-content: center;
@@ -20,35 +25,37 @@ h2{
 }
 .register-container {
     background-color: var(--white);
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 450px;
+    max-width: 400px;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .register-container h1 {
     text-align: center;
-    color: #333;
-    margin-bottom: 20px;
+    color: var(--black);
+    margin-bottom: 1.5rem;
 }
 
-.register-container label {
+.form-group label {
     display: block;
-    margin-bottom: 8px;
-    color: #555;
-    font-size: 14px;
+    margin-bottom: 0.5rem;
+    color: var(--black);
+    font-weight: bold;
 }
 
-.register-container input[type="text"],
-.register-container input[type="email"],
-.register-container input[type="password"] {
+.form-group input {
     width: 100%;
-    padding: 10px;
+    padding: 0.5rem;
     margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 14px;
+    border: 1px solid var(--fawn);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.form-group input:focus {
+    border-color: var(--sandy-brown);
+    outline: none;
 }
 
 .register-container button {
@@ -67,17 +74,18 @@ h2{
 .btn:hover {
     background-color: var(--safety-orange);
 }     
-.register-container a{
+.footer {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--black);
+  }
+  
+  .footer a {
     color: var(--sandy-brown);
     text-decoration: none;
-}
-
-.register-container a:hover{
-    color: var(--safety-orange);
+  }
+  
+  .footer a:hover {
     text-decoration: underline;
-}
-
-.register-container p{
-    display: flex;
-    justify-content: center;
-}
+  }

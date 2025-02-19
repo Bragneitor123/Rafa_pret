@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuevo Proyecto</title>
+    <title>Pendientes lider</title>
     <link rel="stylesheet" href="../../styles/css/sb-admin-2.min.css">
     <link rel="stylesheet" href="../../styles/css/centrado.css">
 </head>
@@ -20,9 +20,9 @@
             </li>
             <hr class="sidebar-divider">
             <li class="nav-item">
-                <a class="nav-link collapsed" href="../nuevo_proyecto/nuevo_proyecto.html">
+                <a class="nav-link collapsed" href="../nueva_tarea/nueva_tarea.html">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Nuevo Proyecto</span>
+                    <span>Nueva tarea</span>
                 </a>
             </li>
             <hr class="sidebar-divider d-none d-md-block">
@@ -50,15 +50,17 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <h1 class="h3 mb-4 text-gray-800">Dashboard</h1>
+                    <h1 class="h3 mb-4 text-gray-800">TAREAS PENDIENTES</h1>
 
                     <!-- Tabla de Usuarios -->
                     <table class="table table-striped centrado">
                         <thead>
                             <tr>
-                                <th scope="col">ID#</th>
-                                <th scope="col">Nombre</th>
-                                <th scope="col">Email</th>
+
+                                <th scope="col">Tarea</th>
+                                <th scope="col">Responsable</th>
+                                <th scope="col">Descripción</th>
+                                <th scope="col">Estado</th>
                                 <th scope="col">Acciones</th>
                             </tr>
                         </thead>
@@ -70,14 +72,6 @@
                 <!-- End Page Content -->
             </div>
 
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; CARPIZO FIERRO BRIAN DE JESUS 2025</span>
-                    </div>
-                </div>
-            </footer>
         </div>
     </div>
 
@@ -97,11 +91,12 @@
             usuarios.forEach(usuario => {
                 const row = `
                     <tr>
-                        <th scope="row">${usuario.id}</th>
                         <td>${usuario.fullname}</td>
                         <td>${usuario.email}</td>
+                        <td>Descripción</td>
+                        <td>Activo</td>
                         <td>
-                            <button class="btn btn-success">Editar</button>
+                            <a href="../editarTarea/editarTarea.html" class="btn btn-success">Editar</a>
                             <button class="btn btn-danger">Eliminar</button>
                         </td>
                     </tr>

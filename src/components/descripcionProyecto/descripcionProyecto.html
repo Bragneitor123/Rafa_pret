@@ -35,28 +35,31 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <h1 class="h3 mb-4 text-gray-800">Crear nueva tarea</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Editar proyecto</h1>
 
                     <!-- Formulario -->
-                    <form action="#" class="w-100" id="projectForm">
+                    <form class="w-100" id="projectForm">
                         <div class="mb-3">
-                            <label for="nombre" class="form-label">Titulo tarea</label>
+                            <label for="nombre" class="form-label">Nombre</label>
                             <input type="text" class="form-control" id="nombre" placeholder="Ingrese el nombre del proyecto" required>
                         </div>
                         <div class="mb-3">
-                            <label for="descripcion" class="form-label">Responsable</label>
+                            <label for="descripcion" class="form-label">Descripción</label>
                             <textarea class="form-control" id="descripcion" placeholder="Ingrese una descripción" required></textarea>
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label">Estado</label>
+                            <label for="email" class="form-label">Correo Electrónico</label>
                             <input type="email" class="form-control" id="email" placeholder="Ingrese su correo" required>
                         </div>
                         <div class="mb-3">
-                            <label for="telefono" class="form-label">Fecha de Inicio</label>
+                            <label for="telefono" class="form-label">Teléfono</label>
                             <input type="tel" class="form-control" id="telefono" placeholder="Ingrese su teléfono" required>
                         </div>
-                        <button type="submit" class="btn btn-primary">Crear tarea</button>
-                        <a href="../dashborad_liderequipo/dashboard_lider.html" class="btn btn-danger">Cancelar</a>
+                        <div>
+                            <button type="submit" class="btn btn-warning">Guardar cambios</button>
+                            <a href="../dashboard/dashboard.html" class="btn btn-danger">Cancelar</a>
+                        </div>
+
                     </form>
                 </div>
             </div>
